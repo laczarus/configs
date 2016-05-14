@@ -1,0 +1,46 @@
+out_to_x no
+own_window no
+out_to_console yes
+background no
+max_text_width 0
+
+# Update interval in seconds
+update_interval 2.0
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Shortens units to a single character (kiB->k, GiB->G, etc.). Default is off.
+short_units yes
+
+# How strict should if_up be when testing an interface for being up?
+# The value is one of up, link or address, to check for the interface
+# being solely up, being up and having link or being up, having link
+# and an assigned IP address.
+if_up_strictness address
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+# use_spacer should have an argument of left, right, or none
+use_spacer left
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# Stuff after 'TEXT' will be formatted on screen
+TEXT
+
+# JSON for i3bar
+
+ [{ "full_text" : " ${upspeed wlp2s0$}" , "color": "\#A35B66"},
+  { "full_text" : " ${downspeed wlp2s0}" , "color": "\#99AB6F"},
+  { "full_text" : "  ${wireless_essid wlp2s0}" , "color" : "\#495D6E" },
+  #{ "full_text" : "  ${rss http://feeds.feedburner.com/TechCrunch/ 10 item_title 0}" , "color" : "\#9E9E9E" },
+  { "full_text" : "  ${kernel}-${machine}" , "color" : "\#CA9733" },
+  { "full_text" : "  ${uptime}" , "color" : "\#825969" },
+  { "full_text" : "  ${time %A/%h - %D}" , "color" : "\#839191" },
+  { "full_text" : "  ${time %H:%M}" , "color" : "\#839191" }],
